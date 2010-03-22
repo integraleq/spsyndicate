@@ -1,0 +1,3 @@
+AddHandler v8cgi-script .js
+RewriteEngine On
+RewriteRule ^ myproject.js [E=ROUTE:$1,L]
