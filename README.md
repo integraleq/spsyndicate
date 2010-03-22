@@ -2,7 +2,7 @@ Jason ~ A JSON Web Framework
 ============================
 Jason is a MTV web framework that accomplishes most of its tasks using JavaScript
 Object Notation ([JSON](http://www.json.org/)). Building templates, routing uri
-paths to views, configuration management, etc. is all done defining/using JavaScript object
+paths to views, configuration management, etc. is all done by defining/using JavaScript object
 literals.
 
 
