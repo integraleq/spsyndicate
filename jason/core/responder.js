@@ -7,8 +7,17 @@ var HTTPResponse = new Class({
         this.response = response;
     },
     route: function(){
-        var routes = new Hash(require(conf.paths.project + 'routes').routes);
-        this.response.write(HTML.dump(request));
+        var dest = null,
+            requestURI = system.env.REQUEST_URI.substring(1),
+            routes = new Hash(require(conf.paths.project + 'routes').routes);
+        
+        routes.each(function(view, uri){
+            if (requestURI.test(uri)) dest = view(this);
+        });
+
+        if ($defined(dest)) this.response.write(dest);
+        else this.response.write("No view mapped for the requested uri.");
+        
     }
 });
 

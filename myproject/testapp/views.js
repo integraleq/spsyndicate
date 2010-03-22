@@ -1,5 +1,5 @@
 include('./myproject/config');
 
-exports.hello = function(dispatch) {
+exports.hello = function(httpResponse) {
     return conf.paths.templates + 'hello.html.js';
 };
