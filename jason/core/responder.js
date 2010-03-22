@@ -16,7 +16,7 @@ var HTTPResponse = new Class({
         });
 
         if ($defined(dest)) this.response.write(dest);
-        else this.response.write("No view mapped for the requested uri.");
+        else throw "No view mapped for the requested uri.";
         
     }
 });

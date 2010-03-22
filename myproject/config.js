@@ -1,6 +1,9 @@
 var cwd = system.getcwd();
 
 exports.conf = {
+    'templates': {
+        'doctype': '<!DOCTYPE html>',
+    },
     'paths': {
         'project': cwd + '/myproject/', 
         'jason': cwd + '/jason/',

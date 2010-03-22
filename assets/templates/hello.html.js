@@ -1,4 +1,4 @@
-exports.hello = {
+exports.template = {
     "html": {
         "head": {
             "title": "Springfield Programming Syndicate"
