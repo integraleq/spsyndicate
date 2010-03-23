@@ -1,12 +1,7 @@
 include('./myproject/config');
-
-var hello = require(conf.paths.apps.testapp + 'views').hello;
-var hello2 = require(conf.paths.apps.testapp + 'views').hello2;
+include(conf.paths.apps.testapp + 'views');
 
 exports.routes = {
-    '^$': function(httpResponse) {
-        return "HONK";
-    },
-    '^hello/?$': hello,
-    '^hello2/?$': hello2
+    '^$': hello,
+    '^philTest/?$': philTest,
 };

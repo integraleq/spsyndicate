@@ -27,8 +27,8 @@ var Template = new Class({
         this.context = context;
     },
     render: function() {
-        template = new Hash(require(this.filepath).template);
-        var content = (template.has('html')) ? objToHTML(template.html) : null;
+        var template = new Hash(require(this.filepath).template),
+            content = template.has('html') ? objToHTML(template.html) : null;
 
         if ($defined(content)) {
             return content;

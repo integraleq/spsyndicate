@@ -6,7 +6,7 @@ exports.hello = function(httpResponse) {
     return temp.render();
 };
 
-exports.hello2 = function(httpResponse) {
-    temp = new Template(conf.paths.templates + 'hello2.html.js', {});
+exports.philTest = function(httpResponse) {
+    temp = new Template(conf.paths.templates + 'philTest.html.js', {});
     return temp.render();
 };

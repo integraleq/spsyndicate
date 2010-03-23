@@ -7,10 +7,9 @@ var HTTPResponse = new Class({
         this.response = response;
     },
     route: function() {
-        
-        var dest = null;
-        requestURI = system.env.REQUEST_URI.substring(1);
-        routes = new Hash(require(conf.paths.project + 'routes').routes);
+        var dest = null,
+            requestURI = system.env.REQUEST_URI.substring(1),
+            routes = new Hash(require(conf.paths.project + 'routes').routes);
         
         routes.each(function(view, uri) {
             if (requestURI.test(uri)) {
