@@ -1,0 +1,32 @@
+include(jason.core.db.models)
+
+var User = {
+    'userId':{
+        'type':'string',
+        'maxLength':'30'
+        'dataModifiers':{
+            'NULL':'False',
+            'AutoIncrement':True
+        }
+    }
+    'userName':{
+        'type':'string',
+        'maxLength':'30'
+        'dataModifiers':{
+            'NULL':'False'
+        }
+    'password':{
+        'type':'encrypted',
+        'maxLength':'30'
+        'dataModifiers':{
+            'NULL':'False',
+            'DefaultValue':generateRandomPassword()
+        }
+    'address':{
+        'type':'string',
+        'maxLength':'80'
+        'dataModifiers':{
+            'NULL':'True',
+        }
+    }
+}
