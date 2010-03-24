@@ -7,6 +7,7 @@ var User = {
         'dataModifiers':{
             'NULL':'False',
             'AutoIncrement':True
+            'PrimaryKey':True
         }
     }
     'userName':{
@@ -27,6 +28,7 @@ var User = {
         'maxLength':'80'
         'dataModifiers':{
             'NULL':'True',
+            'ForeignKey':True
         }
     }
 }
